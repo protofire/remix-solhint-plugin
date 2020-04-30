@@ -7,7 +7,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   node: {
-    fs: 'empty'
+    fs: 'empty',
+    module: 'empty'
   },
   optimization: {
     minimize: false
