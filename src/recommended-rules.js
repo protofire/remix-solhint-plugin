@@ -23,7 +23,7 @@ export default {
   "check-send-result": "error",
   "avoid-call-value": "error",
   "max-states-count": "error",
-  "mark-callable-contracts": "error",
+  "mark-callable-contracts": "off",
   "no-empty-blocks": "error",
   "no-unused-vars": "error",
   "payable-fallback": "error",

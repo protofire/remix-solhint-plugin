@@ -57,6 +57,8 @@ function main() {
       log(`${reporter.reports.length} problems found`)
     }
 
+    await client.editor.discardHighlight()
+
     reporter.reports.forEach((report) => {
       client.editor.highlight({
         start: {
