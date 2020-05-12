@@ -96,8 +96,10 @@ function reportMessage(report, filename) {
   htmlReport.classList.add(`${typeOfReport[report.severity]}`)
   htmlReport.classList.add(`alert`)
   htmlReport.classList.add(`alert-${typeOfReport[report.severity]}`)
+  const pre = document.createElement('pre')
+  pre.style.whiteSpace = 'break-spaces'
   htmlReport
-    .appendChild(document.createElement('pre'))
+    .appendChild(pre)
     .appendChild(document.createElement('span'))
     .append(text)
 
