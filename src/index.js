@@ -14,10 +14,10 @@ class SolhintPlugin extends PluginClient {
       name: 'solhint',
       displayName: 'Solhint by Protofire',
       location: 'sidePanel',
-      icon: 'https://raw.githubusercontent.com/protofire/solhint/3.0/solhint.png',
+      icon: 'https://raw.githubusercontent.com/protofire/solhint/master/solhint-icon.png',
       methods: [],
       events: [],
-      description: ' - ',
+      description: 'Run Solhint in your Remix project',
       version: '0.0.1'
     }
   }
