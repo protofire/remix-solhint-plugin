@@ -1,4 +1,5 @@
-import { buildIframeClient, PluginClient } from '@remixproject/plugin'
+import { PluginClient } from '@remixproject/plugin'
+import { createWebviewClient } from '@remixproject/plugin-vscode'
 import { processStr } from 'solhint'
 import recommendedRules from './recommended-rules'
 
@@ -26,7 +27,7 @@ class SolhintPlugin extends PluginClient {
 log('about to start')
 
 const devMode = { port: 8000 }
-const client = buildIframeClient(new SolhintPlugin({ devMode }))
+const client = createWebviewClient(new SolhintPlugin({ devMode }))
 
 require.ensure([], () => {
   client.onload(main)
