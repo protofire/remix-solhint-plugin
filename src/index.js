@@ -1,5 +1,5 @@
 import { PluginClient } from '@remixproject/plugin'
-import { createWebviewClient } from '@remixproject/plugin-vscode'
+import { createClient } from '@remixproject/plugin-webview'
 import { processStr } from 'solhint'
 import recommendedRules from './recommended-rules'
 
@@ -27,7 +27,7 @@ class SolhintPlugin extends PluginClient {
 log('about to start')
 
 const devMode = { port: 8000 }
-const client = createWebviewClient(new SolhintPlugin({ devMode }))
+const client = createClient(new SolhintPlugin({ devMode }))
 
 require.ensure([], () => {
   client.onload(main)

@@ -18,38 +18,20 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@remixproject/plugin-vscode@^0.3.0-alpha.3":
-  version "0.3.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin-vscode/-/plugin-vscode-0.3.0-alpha.3.tgz#c1f733528e70a318080c95bd09fa88f3952b7988"
-  integrity sha512-FwyLZ/yneX+v8PZ9JK2GJ4rUIKb5n813m2Bs+9Cs2VgEXc5yaPDMsQzJcGuLu40EFmbiVhrrXzgtzJpnGmOYTw==
-  dependencies:
-    "@remixproject/plugin" "0.3.0-alpha.4"
+"@remixproject/plugin-webview@^0.3.0-beta.4":
+  version "0.3.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@remixproject/plugin-webview/-/plugin-webview-0.3.0-beta.4.tgz#2055d73227f902977aa962864b7b49c22668e144"
+  integrity sha512-CGPJadZGwfqzrXCYlq2zVjoGU7lKS99hF0MP9ieTe7JQDS64Qo93d/iM0YM75TR0SRo6NY2d/OtdvlNMisN3GA==
 
-"@remixproject/plugin@0.3.0-alpha.4":
-  version "0.3.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin/-/plugin-0.3.0-alpha.4.tgz#a9b6ba0a686f54196bb3e54dee2988e9e1bb05f2"
-  integrity sha512-nnriKHN6UTm8KuUFdbepHmZj5gVzan1h2PZPle0UmooQnzNE6Qw4DffnXqky9teNBJDTo0x0ZxTgYVZf+V4xMA==
-  dependencies:
-    "@types/node" "^13.13.4"
-    events "^3.0.0"
-
-"@remixproject/plugin@^0.3.0-alpha.8":
-  version "0.3.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin/-/plugin-0.3.0-alpha.8.tgz#32323a03fc6fb45b3d368f1fe9f27e038c3fb7a3"
-  integrity sha512-uV5/YQPhX4E3amCS2yBV9tfwDo6ZThady9n70H20nFPGiZYnZxruFL6kf4iKQAj5FrnzjDyEVEZwfV9QyrAwZg==
-  dependencies:
-    "@types/node" "^13.13.4"
-    events "^3.0.0"
+"@remixproject/plugin@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@remixproject/plugin/-/plugin-0.1.18.tgz#1f74aca46b84e8f87b58893942b113d6bb04808e"
+  integrity sha512-xJrqgl22ugRFMvN9tHcLZ8BTK4uGNBqYkIyme1tCWOVgQAB7PCQsTUgDFFDZDE4GmE7WcogZ/1Bv7U7c+ZjydQ==
 
 "@solidity-parser/parser@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@solidity-parser/parser/-/parser-0.6.0.tgz#deb964a4dbb8c21a342ee35b4acefb505fd04ea1"
   integrity sha512-RiJXfS22frulogcfQCFhbKrd5ATu6P4tYUv/daChiIh6VHyKQ1kkVZVfX6aP7c2YGU/Bf9RwGNKdwLjfpaoqYQ==
-
-"@types/node@^13.13.4":
-  version "13.13.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.14.tgz#20cd7d2a98f0c3b08d379f4ea9e6b315d2019529"
-  integrity sha512-Az3QsOt1U/K1pbCQ0TXGELTuTkPLOiFIQf3ILzbOyo0FqgV9SxRnxbxM5QlAveERZMHpZY+7u3Jz2tKyl+yg6g==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"

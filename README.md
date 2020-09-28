@@ -6,7 +6,6 @@
 ```
 yarn
 yarn build
-yarn build
 ```
 2. Open [remix](http://remix.ethereum.org/). Make sure it's using http, not https.
 3. Open the plugins section, click "Connect to a Local Plugin"

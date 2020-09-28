@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "serve": "yarn build && npx serve",
     "watch": "npm run build -- --watch",
     "deploy": "yarn build && yarn surge . solhint.surge.sh"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@remixproject/plugin": "^0.3.0-alpha.8",
-    "@remixproject/plugin-vscode": "^0.3.0-alpha.3",
+    "@remixproject/plugin": "^0.1.18",
+    "@remixproject/plugin-webview": "^0.3.0-beta.4",
     "node-libs-browser": "^2.2.1",
     "solhint": "^3.0.0-rc.8",
     "yo-yo": "^1.4.1"
