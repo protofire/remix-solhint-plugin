@@ -1,4 +1,5 @@
-import { buildIframeClient, PluginClient } from '@remixproject/plugin'
+import { PluginClient } from '@remixproject/plugin'
+import { createClient } from '@remixproject/plugin-webview'
 import { processStr } from 'solhint'
 import recommendedRules from './recommended-rules'
 
@@ -9,26 +10,14 @@ const log = (...args) => console.log('[Solhint]', ...args)
 const solhintReportsContainer = document.querySelector('#solhint-reports')
 
 class SolhintPlugin extends PluginClient {
-  constructor(options) {
-    super(options)
-
-    this.profile = {
-      name: 'solhint',
-      displayName: 'Solhint by Protofire',
-      location: 'sidePanel',
-      icon: 'https://raw.githubusercontent.com/protofire/solhint/master/solhint-icon.png',
-      methods: [],
-      events: [],
-      description: 'Run Solhint in your Remix project',
-      version: '0.0.1'
-    }
+  constructor() {
+    super()
   }
 }
 
 log('about to start')
 
-const devMode = { port: 8000 }
-const client = buildIframeClient(new SolhintPlugin({ devMode }))
+const client = createClient(new SolhintPlugin())
 
 require.ensure([], () => {
   client.onload(main)
