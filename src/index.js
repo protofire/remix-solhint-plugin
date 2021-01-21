@@ -2,6 +2,8 @@ import { buildIframeClient, PluginClient } from '@remixproject/plugin'
 import { processStr } from 'solhint'
 import recommendedRules from './recommended-rules'
 
+require('file-loader?name=[name].[ext]!./index.html');
+
 const log = (...args) => console.log('[Solhint]', ...args)
 
 const solhintReportsContainer = document.querySelector('#solhint-reports')

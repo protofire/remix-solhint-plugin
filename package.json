@@ -1,6 +1,6 @@
 {
   "name": "remix-solhint-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Remix plugin for linting your code with Solhint",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "yo-yo": "^1.4.1"
   },
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "surge": "^0.21.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
