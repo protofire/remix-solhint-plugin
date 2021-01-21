@@ -53,8 +53,10 @@ function main() {
 
     if (reporter.reports.length === 0) {
       log('No reports')
+      client.emit('statusChanged', { key: 'succeed', type: 'success', title: 'SOLHINT no errors found' })
     } else {
       log(`${reporter.reports.length} problems found`)
+      client.emit('statusChanged', { key: reporter.reports.length, type: 'error', title: 'SOLHINT errors found' })
     }
 
     await client.editor.discardHighlight()
