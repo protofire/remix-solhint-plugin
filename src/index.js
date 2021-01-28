@@ -33,13 +33,20 @@ require.ensure([], () => {
   client.onload(main)
 })
 
-function main() {
+async function main() {
   log('running!')
-
-  const severityColorMap = {
-    2: '#E74C3C',
-    3: '#F39C12'
+  const curTheme = await client.theme.currentTheme();
+  var severityColorMap = {
+    2: curTheme.colors.error,
+    3: curTheme.colors.warn
   }
+
+  client.theme.on('themeChanged', theme => {
+    severityColorMap = {
+      2: theme.colors.error,
+      3: theme.colors.warn
+    }
+  })
 
   client.solidity.on('compilationFinished', async (filename) => {
     log(`${filename} compiled`)
@@ -58,7 +65,7 @@ function main() {
       log(`${reporter.reports.length} problems found`)
     }
 
-    await client.editor.discardHighlight()
+    await client.editor.discardHighlight();
 
     reporter.reports.forEach((report) => {
       client.editor.highlight({
