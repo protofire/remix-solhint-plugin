@@ -18,64 +18,36 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@remixproject/plugin-api@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin-api/-/plugin-api-0.3.3.tgz#8e3bad1d8d08b0143583d1772a8f177eb9df307c"
-  integrity sha512-Wsic9cnTj/9B7dGKQEq+VTAwit2o7rtdVwJ+lcI68SbavhNHGo0IUexOZkxwGFL2THchWz2hjfrs80W10yle0A==
+"@remixproject/plugin-api@0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@remixproject/plugin-api/-/plugin-api-0.3.7.tgz#34a9ec77d989a7ce34700762a12c17167af636ed"
+  integrity sha512-efw2qELFzlO4R62QAQM+5YbycEqzlp/lyTjIm0dKiVyP1suz4UdrFAPIYMPFIAlrHDB0qMhCxe+W/HXLZCcvsg==
   dependencies:
-    "@remixproject/plugin-utils" "0.3.3"
+    "@remixproject/plugin-utils" "0.3.7"
 
-"@remixproject/plugin-api@0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin-api/-/plugin-api-0.3.5.tgz#c0657b1559319ac3a2a7be0d8fcea1b46f7ab158"
-  integrity sha512-QOOC3LZtvEM3hxshazjpm+frPcfbPl1v9Dh/RktNRIgshH1mleoSzImVFZvLfk+FZYkt6CsdiPo4NpRd2Kl6Lw==
-  dependencies:
-    "@remixproject/plugin-utils" "0.3.5"
-
-"@remixproject/plugin-utils@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin-utils/-/plugin-utils-0.3.3.tgz#481267730b4d21ff7ec4040fa20239dd60a1af93"
-  integrity sha512-w1WCdS7bDmbaY83ybIjHzFW9TlQUV2Rt6Fw8hXGnT29ontD6mKoBWhoEPYzasMEHG47lmNzDjRToVPhQh54Q+w==
+"@remixproject/plugin-utils@0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@remixproject/plugin-utils/-/plugin-utils-0.3.7.tgz#dfc433442e1e4e3d1cb5169b5a7e63da8cb6f5b9"
+  integrity sha512-8L9RzouUXYr8vb4BA8yWwZvaSdJrx2twl4JAMIZwtTY8Ur1Ppmt1bkjtO4eQv37ke+3lbqGi9nW+h/4s3X/c+Q==
   dependencies:
     tslib "2.0.1"
 
-"@remixproject/plugin-utils@0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin-utils/-/plugin-utils-0.3.5.tgz#ec558ec240b8a4e026263e242508183842bb3e1d"
-  integrity sha512-QmWPJoMIVXO1/PTaEl07oy9//ZXr0KRVaDyJ7hVj8IgG/o/8xHHHhdDlB2fJ9pzUk7B0AOCkeL8xIqNBsM8VOA==
+"@remixproject/plugin-webview@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@remixproject/plugin-webview/-/plugin-webview-0.3.7.tgz#aa7f5621dc2f13556f0af45b0ab11f568cd1cfdf"
+  integrity sha512-ikhcqxAErHCdfoY+yzhz0AeworGbbIJKMKqTZSBEcIOGD0Huqv/4A/AJYx0/gfv/RSVzp9yObL4fio5LjAK9mw==
   dependencies:
-    tslib "2.0.1"
+    "@remixproject/plugin" "0.3.7"
+    "@remixproject/plugin-api" "0.3.7"
+    "@remixproject/plugin-utils" "0.3.7"
 
-"@remixproject/plugin-webview@/home/0mkar/Karma/remix-plugin/dist/packages/plugin/webview/":
-  version "0.3.5"
+"@remixproject/plugin@0.3.7", "@remixproject/plugin@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@remixproject/plugin/-/plugin-0.3.7.tgz#be8268ee7ea9fb780905df4b24780e8a64bb8ba8"
+  integrity sha512-FrRUKaZgsxAAkYziAKjsMVezd2rtyklHA+Y+OlEtHfICN0NJXjnaSy3Tz5LGRA0MWqnvki6vIw/ZHr8T4zknZQ==
   dependencies:
-    "@remixproject/plugin" "0.3.5"
-    "@remixproject/plugin-api" "0.3.5"
-    "@remixproject/plugin-utils" "0.3.5"
-
-"@remixproject/plugin-webview@file:../remix-plugin/dist/packages/plugin/webview":
-  version "0.3.5"
-  dependencies:
-    "@remixproject/plugin" "0.3.5"
-    "@remixproject/plugin-api" "0.3.5"
-    "@remixproject/plugin-utils" "0.3.5"
-
-"@remixproject/plugin@0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin/-/plugin-0.3.5.tgz#2ab89cb8ebb7757311df2f731f65e73f59ce67be"
-  integrity sha512-L7FD7dk0hNX1fOBe+zpDJSfEOkRnLs5H6I4abWU3Lal8A5QhqjYCm8HBNeXakExwb3KkZZPgRFA17OnsbXdeKA==
-  dependencies:
-    "@remixproject/plugin-api" "0.3.5"
-    "@remixproject/plugin-utils" "0.3.5"
-    events "3.2.0"
-
-"@remixproject/plugin@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@remixproject/plugin/-/plugin-0.3.3.tgz#cb2fa27dab20f884390832768e65d169173cb001"
-  integrity sha512-gSZdgBjb4y2N2+5kMfbJYjO2zH8b1pFd3xdY4ViL5vtt8l4lup+iOVidrGTv1lPPl7Snk+E8NQhRk8Snr6//mg==
-  dependencies:
-    "@remixproject/plugin-api" "0.3.3"
-    "@remixproject/plugin-utils" "0.3.3"
+    "@remixproject/plugin-api" "0.3.7"
+    "@remixproject/plugin-utils" "0.3.7"
     events "3.2.0"
 
 "@solidity-parser/parser@^0.6.0":

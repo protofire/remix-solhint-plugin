@@ -17,8 +17,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@remixproject/plugin": "^0.3.3",
-    "@remixproject/plugin-webview": "/home/0mkar/Karma/remix-plugin/dist/packages/plugin/webview/",
+    "@remixproject/plugin": "^0.3.7",
+    "@remixproject/plugin-webview": "^0.3.7",
     "node-libs-browser": "^2.2.1",
     "solhint": "^3.0.0-rc.8",
     "yo-yo": "^1.4.1"
