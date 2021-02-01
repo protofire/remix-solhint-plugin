@@ -1,6 +1,12 @@
-import { PluginClient } from '@remixproject/plugin'
-import { createClient } from '@remixproject/plugin-webview'
-import { processStr } from 'solhint'
+import {
+  PluginClient
+} from '@remixproject/plugin'
+import {
+  createClient
+} from '@remixproject/plugin-webview'
+import {
+  processStr
+} from 'solhint'
 import recommendedRules from './recommended-rules'
 
 require('file-loader?name=[name].[ext]!./index.html');
@@ -15,6 +21,11 @@ class SolhintPlugin extends PluginClient {
   }
 }
 
+const severityColorMap = {
+  2: '#E74C3C',
+  3: '#F39C12'
+}
+
 log('about to start')
 
 const client = createClient(new SolhintPlugin())
@@ -26,10 +37,7 @@ require.ensure([], () => {
 function main() {
   log('running!')
 
-  const severityColorMap = {
-    2: '#E74C3C',
-    3: '#F39C12'
-  }
+
 
   client.solidity.on('compilationFinished', async (filename) => {
     log(`${filename} compiled`)
@@ -44,10 +52,18 @@ function main() {
 
     if (reporter.reports.length === 0) {
       log('No reports')
-      client.emit('statusChanged', { key: 'succeed', type: 'success', title: 'SOLHINT no errors found' })
+      client.emit('statusChanged', {
+        key: 'succeed',
+        type: 'success',
+        title: 'SOLHINT no errors found'
+      })
     } else {
       log(`${reporter.reports.length} problems found`)
-      client.emit('statusChanged', { key: reporter.reports.length, type: 'error', title: 'SOLHINT errors found' })
+      client.emit('statusChanged', {
+        key: reporter.reports.length,
+        type: 'error',
+        title: 'SOLHINT errors found'
+      })
     }
 
     await client.editor.discardHighlight()
@@ -68,7 +84,10 @@ function reportMessage(report, filename) {
     2: 'danger',
     3: 'warning'
   }
-  const messageType = { '2': 'Error', '3': 'Warning' }
+  const messageType = {
+    '2': 'Error',
+    '3': 'Warning'
+  }
   const htmlReport = document.createElement('div')
   const text = new Text(`${filename}:${report.line}:${report.column}: ${messageType[report.severity]}: ${report.message}`)
 

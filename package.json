@@ -14,7 +14,7 @@
     "@remixproject/plugin": "^0.3.7",
     "@remixproject/plugin-webview": "^0.3.7",
     "node-libs-browser": "^2.2.1",
-    "solhint": "^3.2.2",
+    "solhint": "^3.3.2",
     "yo-yo": "^1.4.1"
   },
   "devDependencies": {
