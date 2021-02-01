@@ -52,19 +52,6 @@ function main() {
 
     await client.editor.discardHighlight()
 
-    reporter.reports.forEach((report) => {
-      client.editor.highlight({
-        start: {
-          line: report.line - 1,
-          column: report.column - 1
-        },
-        end: {
-          line: report.line - 1,
-          column: report.column
-        }
-      }, filename, severityColorMap[report.severity])
-    })
-
     solhintReportsContainer.innerHTML = ''
     if (reporter.reports.length) {
       reporter.reports.forEach(report => reportMessage(report, filename))
@@ -90,10 +77,26 @@ function reportMessage(report, filename) {
   htmlReport.classList.add(`alert`)
   htmlReport.classList.add(`alert-${typeOfReport[report.severity]}`)
   const pre = document.createElement('pre')
+  const span = document.createElement('span')
+  span.addEventListener('click', () => {
+    setTimeout(() => {
+      client.editor.discardHighlight()
+    }, 2000)
+    client.editor.highlight({
+      start: {
+        line: report.line - 1,
+        column: report.column - 1
+      },
+      end: {
+        line: report.line - 1,
+        column: report.column
+      }
+    }, filename, severityColorMap[report.severity])
+  }, false)
   pre.style.whiteSpace = 'break-spaces'
   htmlReport
     .appendChild(pre)
-    .appendChild(document.createElement('span'))
+    .appendChild(span)
     .append(text)
 
   solhintReportsContainer.appendChild(htmlReport)
