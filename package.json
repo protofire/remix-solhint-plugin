@@ -1,6 +1,6 @@
 {
   "name": "remix-solhint-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Remix plugin for linting your code with Solhint",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@remixproject/plugin": "^0.1.18",
+    "@remixproject/plugin": "^0.3.7",
+    "@remixproject/plugin-webview": "^0.3.7",
     "node-libs-browser": "^2.2.1",
-    "solhint": "^3.0.0-rc.8",
+    "solhint": "^3.3.2",
     "yo-yo": "^1.4.1"
   },
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "surge": "^0.21.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
